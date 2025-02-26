@@ -5,12 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fire</title>
+    <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
-    <!-- Вставка відео через iframe -->
-    <iframe width="560" height="315" src="https://youtu.be/iDLS7Kj7L7I?t=3" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </body>
+<section class="game">
+    <div class="coktail">
+        <h1>Магічна мішанка</h1>
+        <div class="zilia">
+            <div>
+                <p class="texpr" for="zillia1">робота</p>
+                <img class="png" src="./image/1.jfif" alt="">
+                <div class="buttons-game">
+                    <button onclick="changeValue('zillia1', -1)">-</button>
+                    <input type="text-game" id="zillia1" value="1" readonly>
+                    <button onclick="changeValue('zillia1', 1)">+</button>
+                </div>
+            </div>
+
+            <div>
+                <p class="texpr" for="zillia2">робота</p>
+                <img class="png" src="./image/2.jfif" alt="">
+                <div class="buttons-game">
+                    <button onclick="changeValue('zillia2', -1)">-</button>
+                    <input type="text-game" id="zillia2" value="1" readonly>
+                    <button onclick="changeValue('zillia2', 1)">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="content click-buttons">
+            <button onclick="mix()" id="mix">Фортуна</button>
+        </div>
+        <div class="result">
+            <div id="image-container">
+                <img id="display-image" src="./img/0.jfif" alt="Image" />
+            </div>
+
+            <div class="info">
+                <h2 id="name">Робота</h2>
+                <h3 id="description">Опис</h3>
+                <p id="full_description">Детальний Опис</p>
+                <h3 id="price">Ціна</h3>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<script src="./js/prob.js"></script>
 
 </html>
